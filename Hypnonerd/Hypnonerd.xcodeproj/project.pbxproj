@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CF4F140F1DBDE716005AF7CC /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF4F140E1DBDE716005AF7CC /* Launch Screen.storyboard */; };
+		CF4F14131DBDECFF005AF7CC /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF4F14121DBDECFE005AF7CC /* UserNotifications.framework */; };
 		CFFC1187196096CC0023269F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFC1186196096CC0023269F /* AppDelegate.swift */; };
 		CFFC1189196096CC0023269F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFFC1188196096CC0023269F /* Images.xcassets */; };
 		CFFC1195196096CC0023269F /* HypnonerdTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFC1194196096CC0023269F /* HypnonerdTests.swift */; };
@@ -29,6 +30,8 @@
 
 /* Begin PBXFileReference section */
 		CF4F140E1DBDE716005AF7CC /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		CF4F14101DBDEAEE005AF7CC /* Hypnonerd.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Hypnonerd.entitlements; sourceTree = "<group>"; };
+		CF4F14121DBDECFE005AF7CC /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
 		CFFC1181196096CC0023269F /* Hypnonerd.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hypnonerd.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFFC1185196096CC0023269F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CFFC1186196096CC0023269F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF4F14131DBDECFF005AF7CC /* UserNotifications.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,6 +64,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CF4F14111DBDECFE005AF7CC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CF4F14121DBDECFE005AF7CC /* UserNotifications.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CFFC1178196096CB0023269F = {
 			isa = PBXGroup;
 			children = (
@@ -70,6 +82,7 @@
 				CFFC1183196096CC0023269F /* Hypnonerd */,
 				CFFC1191196096CC0023269F /* HypnonerdTests */,
 				CFFC1182196096CC0023269F /* Products */,
+				CF4F14111DBDECFE005AF7CC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -85,6 +98,7 @@
 		CFFC1183196096CC0023269F /* Hypnonerd */ = {
 			isa = PBXGroup;
 			children = (
+				CF4F14101DBDEAEE005AF7CC /* Hypnonerd.entitlements */,
 				CFFC1186196096CC0023269F /* AppDelegate.swift */,
 				CFFC1188196096CC0023269F /* Images.xcassets */,
 				CFFC1184196096CC0023269F /* Supporting Files */,
@@ -169,6 +183,11 @@
 						CreatedOnToolsVersion = 6.0;
 						DevelopmentTeam = D7LQT55MSW;
 						LastSwiftMigration = 0800;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					CFFC118D196096CC0023269F = {
 						CreatedOnToolsVersion = 6.0;
@@ -336,9 +355,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = Hypnonerd/Hypnonerd.entitlements;
 				DEVELOPMENT_TEAM = D7LQT55MSW;
 				INFOPLIST_FILE = Hypnonerd/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.babygreene.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -351,9 +371,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = Hypnonerd/Hypnonerd.entitlements;
 				DEVELOPMENT_TEAM = D7LQT55MSW;
 				INFOPLIST_FILE = Hypnonerd/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.babygreene.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";

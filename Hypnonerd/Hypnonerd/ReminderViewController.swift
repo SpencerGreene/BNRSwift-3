@@ -7,19 +7,50 @@
 //
 
 import UIKit
+import UserNotifications
 
 class ReminderViewController: UIViewController {
+    
+    func makeNotificationTrigger(at date: Date) -> UNCalendarNotificationTrigger {
+        let calendar = Calendar(identifier: .gregorian)
+        let components = calendar.dateComponents(in: .current, from: date)
+        let newComponents = DateComponents(calendar: calendar, timeZone: .current, month: components.month, day: components.day, hour: components.hour, minute: components.minute)
+        let trigger = UNCalendarNotificationTrigger(dateMatching: newComponents, repeats: false)
+        
+        return trigger
+    }
     
     @IBOutlet var datePicker: UIDatePicker?
     
     @IBAction func addReminder(_: AnyObject) {
         let date = self.datePicker!.date
         // NSLog("Setting reminder for %@", date)
-        
+
+        /*
         let note = UILocalNotification()
         note.alertBody = "Hypnotize me"
         note.fireDate = date
         UIApplication.shared.scheduleLocalNotification(note)
+        */
+        
+        
+        let noteContent = UNMutableNotificationContent()
+        noteContent.title = "Hypnotize me"
+        noteContent.body  = "Set for a future reminder"
+        noteContent.sound = UNNotificationSound.default()
+        
+        let trigger = makeNotificationTrigger(at: date)
+        
+        let request = UNNotificationRequest(identifier: "textNotification", content: noteContent, trigger: trigger)
+        
+        UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
+        UNUserNotificationCenter.current().add(request) {(error) in
+            if let error = error {
+                print("O no there was an error: \(error)")
+            }
+        }
+        print("reminder scheduled")
+        
     }
     
     override init(nibName nibNameOrNil: String!, bundle nibBundleOrNil: Bundle!) {

@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 // the built-in hypot function only works on Double, need one that works on CGFloat
-func hypot(x1: CGFloat, x2: CGFloat) -> CGFloat {
+func hypot(_ x1: CGFloat, x2: CGFloat) -> CGFloat {
     let square = Double(x1*x1 + x2*x2)
     let hyp = sqrt(square)
     return(CGFloat(hyp))
@@ -18,11 +18,11 @@ func hypot(x1: CGFloat, x2: CGFloat) -> CGFloat {
 
 class HypnosisView: UIView {
     
-    var circleColor = UIColor.greenColor()
+    var circleColor = UIColor.green
     
     class func randomColor() -> UIColor {
         func r1() -> CGFloat {
-            let rInt = random() % 100
+            let rInt = Int(arc4random_uniform(100))
             let rFloat = CGFloat(rInt) / 100.0
             return(rFloat)
         }
@@ -33,7 +33,7 @@ class HypnosisView: UIView {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.backgroundColor = UIColor.clearColor()
+        self.backgroundColor = UIColor.clear
         // Initialization code
     }
     
@@ -43,7 +43,7 @@ class HypnosisView: UIView {
     
     // Only override drawRect: if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
-    override func drawRect(rect: CGRect)
+    override func draw(_ rect: CGRect)
     {
 
         
@@ -59,16 +59,18 @@ class HypnosisView: UIView {
         path.lineWidth = 10
         self.circleColor.setStroke()
 
-        for (var currentRadius = maxRadius; currentRadius > 0.0; currentRadius -= 20) {
-            path.moveToPoint(CGPoint(x: center.x + currentRadius, y: center.y))
-            path.addArcWithCenter(center, radius: currentRadius, startAngle: 0.0, endAngle: twoPi, clockwise: true)
+        var currentRadius = maxRadius
+        while(currentRadius > 0.0) {
+            path.move(to: CGPoint(x: center.x + currentRadius, y: center.y))
+            path.addArc(withCenter: center, radius: currentRadius, startAngle: 0.0, endAngle: twoPi, clockwise: true)
+            currentRadius = currentRadius - 20.0
         }
         
         path.stroke()
         
     }
     
-    override func touchesBegan(touches: NSSet!, withEvent event: UIEvent!) {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         NSLog("%@ was touched", self)
         self.circleColor = HypnosisView.randomColor()
         self.setNeedsDisplay()

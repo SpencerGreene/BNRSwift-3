@@ -12,24 +12,24 @@ class ReminderViewController: UIViewController {
     
     @IBOutlet var datePicker: UIDatePicker?
     
-    @IBAction func addReminder(AnyObject) {
+    @IBAction func addReminder(_: AnyObject) {
         let date = self.datePicker!.date
-        NSLog("Setting reminder for %@", date)
+        // NSLog("Setting reminder for %@", date)
         
         let note = UILocalNotification()
         note.alertBody = "Hypnotize me"
         note.fireDate = date
-        UIApplication.sharedApplication().scheduleLocalNotification(note)
+        UIApplication.shared.scheduleLocalNotification(note)
     }
     
-    override init(nibName nibNameOrNil: String!, bundle nibBundleOrNil: NSBundle!) {
+    override init(nibName nibNameOrNil: String!, bundle nibBundleOrNil: Bundle!) {
         let nib = nibNameOrNil ?? "ReminderViewController"
         super.init(nibName: nib, bundle: nibBundleOrNil)
         self.tabBarItem.title = "Remind"
         self.tabBarItem.image = UIImage(named:"Time.png")
     }
     
-    convenience override init() {
+    convenience init() {
         // self.init(nibName: "ReminderViewController", bundle: nil)
         self.init(nibName: nil, bundle: nil)
 
@@ -45,15 +45,15 @@ class ReminderViewController: UIViewController {
     }
     
     override func awakeFromNib() {
-        println("awake from nib: datepicker is \(datePicker)")
+        print("awake from nib: datepicker is \(datePicker)\n")
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        println("viewWillAppear: datePicker = \(datePicker)")
+        print("viewWillAppear: datePicker = \(datePicker)\n")
 
         if (self.datePicker != nil) {
-            self.datePicker!.minimumDate = NSDate(timeIntervalSinceNow: 60)
+            self.datePicker!.minimumDate = Date(timeIntervalSinceNow: 60)
         }
     }
    

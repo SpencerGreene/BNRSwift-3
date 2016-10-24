@@ -1,0 +1,472 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CF1818771980D29B00DEA400 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1818761980D29B00DEA400 /* ImageViewController.swift */; };
+		CF2259F1197E120300080197 /* ItemPicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2259EF197E120300080197 /* ItemPicCell.swift */; };
+		CF2259F2197E120300080197 /* ItemPicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF2259F0197E120300080197 /* ItemPicCell.xib */; };
+		CF560EC71DA828D80003B572 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF560EC61DA828D80003B572 /* Launch Screen.storyboard */; };
+		CFC23518197CF133000335D9 /* SwiftUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC23517197CF133000335D9 /* SwiftUtilities.swift */; };
+		CFF5D53C19630A010003A0B3 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF5D53A19630A010003A0B3 /* DetailViewController.swift */; };
+		CFF5D53D19630A010003A0B3 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFF5D53B19630A010003A0B3 /* DetailViewController.xib */; };
+		CFF5D5401966057A0003A0B3 /* DatePickController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF5D53E1966057A0003A0B3 /* DatePickController.swift */; };
+		CFF5D5411966057A0003A0B3 /* DatePickController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFF5D53F1966057A0003A0B3 /* DatePickController.xib */; };
+		CFF5D545196775A00003A0B3 /* ImageStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF5D544196775A00003A0B3 /* ImageStore.swift */; };
+		CFF5D5471967CA660003A0B3 /* CameraOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF5D5461967CA660003A0B3 /* CameraOverlayView.swift */; };
+		CFFC11B7196136140023269F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFC11B6196136140023269F /* AppDelegate.swift */; };
+		CFFC11B9196136140023269F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFFC11B8196136140023269F /* Images.xcassets */; };
+		CFFC11C5196136140023269F /* HomepwnerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFC11C4196136140023269F /* HomepwnerTests.swift */; };
+		CFFC11CF196136A40023269F /* ItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFC11CE196136A40023269F /* ItemsViewController.swift */; };
+		CFFC11D119613A5B0023269F /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFC11D019613A5B0023269F /* Item.swift */; };
+		CFFC11D319613AE60023269F /* ItemStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFC11D219613AE60023269F /* ItemStore.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CFFC11BF196136140023269F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CFFC11A9196136140023269F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CFFC11B0196136140023269F;
+			remoteInfo = Homepwner;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CF1818761980D29B00DEA400 /* ImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
+		CF2259EF197E120300080197 /* ItemPicCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ItemPicCell.swift; path = ../ItemPicCell.swift; sourceTree = "<group>"; };
+		CF2259F0197E120300080197 /* ItemPicCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ItemPicCell.xib; path = ../ItemPicCell.xib; sourceTree = "<group>"; };
+		CF560EC61DA828D80003B572 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		CFC23517197CF133000335D9 /* SwiftUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftUtilities.swift; sourceTree = "<group>"; };
+		CFF5D53A19630A010003A0B3 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailViewController.swift; path = ../DetailViewController.swift; sourceTree = "<group>"; };
+		CFF5D53B19630A010003A0B3 /* DetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DetailViewController.xib; path = ../DetailViewController.xib; sourceTree = "<group>"; };
+		CFF5D53E1966057A0003A0B3 /* DatePickController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DatePickController.swift; path = ../DatePickController.swift; sourceTree = "<group>"; };
+		CFF5D53F1966057A0003A0B3 /* DatePickController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DatePickController.xib; path = ../DatePickController.xib; sourceTree = "<group>"; };
+		CFF5D544196775A00003A0B3 /* ImageStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageStore.swift; path = ../ImageStore.swift; sourceTree = "<group>"; };
+		CFF5D5461967CA660003A0B3 /* CameraOverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CameraOverlayView.swift; path = ../CameraOverlayView.swift; sourceTree = "<group>"; };
+		CFFC11B1196136140023269F /* Homepwner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Homepwner.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CFFC11B5196136140023269F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CFFC11B6196136140023269F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CFFC11B8196136140023269F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		CFFC11BE196136140023269F /* HomepwnerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HomepwnerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CFFC11C3196136140023269F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CFFC11C4196136140023269F /* HomepwnerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomepwnerTests.swift; sourceTree = "<group>"; };
+		CFFC11CE196136A40023269F /* ItemsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ItemsViewController.swift; path = ../ItemsViewController.swift; sourceTree = "<group>"; };
+		CFFC11D019613A5B0023269F /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Item.swift; path = ../Item.swift; sourceTree = "<group>"; };
+		CFFC11D219613AE60023269F /* ItemStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ItemStore.swift; path = ../ItemStore.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CFFC11AE196136140023269F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CFFC11BB196136140023269F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CFFC11A8196136140023269F = {
+			isa = PBXGroup;
+			children = (
+				CFC23517197CF133000335D9 /* SwiftUtilities.swift */,
+				CFFC11B3196136140023269F /* Homepwner */,
+				CFFC11C1196136140023269F /* HomepwnerTests */,
+				CFFC11B2196136140023269F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CFFC11B2196136140023269F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CFFC11B1196136140023269F /* Homepwner.app */,
+				CFFC11BE196136140023269F /* HomepwnerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CFFC11B3196136140023269F /* Homepwner */ = {
+			isa = PBXGroup;
+			children = (
+				CF2259EF197E120300080197 /* ItemPicCell.swift */,
+				CF560EC61DA828D80003B572 /* Launch Screen.storyboard */,
+				CF2259F0197E120300080197 /* ItemPicCell.xib */,
+				CFF5D544196775A00003A0B3 /* ImageStore.swift */,
+				CFFC11D019613A5B0023269F /* Item.swift */,
+				CFFC11D219613AE60023269F /* ItemStore.swift */,
+				CFFC11CE196136A40023269F /* ItemsViewController.swift */,
+				CF1818761980D29B00DEA400 /* ImageViewController.swift */,
+				CFF5D53E1966057A0003A0B3 /* DatePickController.swift */,
+				CFF5D53F1966057A0003A0B3 /* DatePickController.xib */,
+				CFF5D53A19630A010003A0B3 /* DetailViewController.swift */,
+				CFF5D53B19630A010003A0B3 /* DetailViewController.xib */,
+				CFF5D5461967CA660003A0B3 /* CameraOverlayView.swift */,
+				CFFC11B6196136140023269F /* AppDelegate.swift */,
+				CFFC11B8196136140023269F /* Images.xcassets */,
+				CFFC11B4196136140023269F /* Supporting Files */,
+			);
+			path = Homepwner;
+			sourceTree = "<group>";
+		};
+		CFFC11B4196136140023269F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CFFC11B5196136140023269F /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CFFC11C1196136140023269F /* HomepwnerTests */ = {
+			isa = PBXGroup;
+			children = (
+				CFFC11C4196136140023269F /* HomepwnerTests.swift */,
+				CFFC11C2196136140023269F /* Supporting Files */,
+			);
+			path = HomepwnerTests;
+			sourceTree = "<group>";
+		};
+		CFFC11C2196136140023269F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CFFC11C3196136140023269F /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CFFC11B0196136140023269F /* Homepwner */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CFFC11C8196136140023269F /* Build configuration list for PBXNativeTarget "Homepwner" */;
+			buildPhases = (
+				CFFC11AD196136140023269F /* Sources */,
+				CFFC11AE196136140023269F /* Frameworks */,
+				CFFC11AF196136140023269F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Homepwner;
+			productName = Homepwner;
+			productReference = CFFC11B1196136140023269F /* Homepwner.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CFFC11BD196136140023269F /* HomepwnerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CFFC11CB196136140023269F /* Build configuration list for PBXNativeTarget "HomepwnerTests" */;
+			buildPhases = (
+				CFFC11BA196136140023269F /* Sources */,
+				CFFC11BB196136140023269F /* Frameworks */,
+				CFFC11BC196136140023269F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CFFC11C0196136140023269F /* PBXTargetDependency */,
+			);
+			name = HomepwnerTests;
+			productName = HomepwnerTests;
+			productReference = CFFC11BE196136140023269F /* HomepwnerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CFFC11A9196136140023269F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = babygreene.org;
+				TargetAttributes = {
+					CFFC11B0196136140023269F = {
+						CreatedOnToolsVersion = 6.0;
+						LastSwiftMigration = 0800;
+					};
+					CFFC11BD196136140023269F = {
+						CreatedOnToolsVersion = 6.0;
+						LastSwiftMigration = 0800;
+						TestTargetID = CFFC11B0196136140023269F;
+					};
+				};
+			};
+			buildConfigurationList = CFFC11AC196136140023269F /* Build configuration list for PBXProject "Homepwner" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = CFFC11A8196136140023269F;
+			productRefGroup = CFFC11B2196136140023269F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CFFC11B0196136140023269F /* Homepwner */,
+				CFFC11BD196136140023269F /* HomepwnerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CFFC11AF196136140023269F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CFFC11B9196136140023269F /* Images.xcassets in Resources */,
+				CFF5D5411966057A0003A0B3 /* DatePickController.xib in Resources */,
+				CF2259F2197E120300080197 /* ItemPicCell.xib in Resources */,
+				CF560EC71DA828D80003B572 /* Launch Screen.storyboard in Resources */,
+				CFF5D53D19630A010003A0B3 /* DetailViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CFFC11BC196136140023269F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CFFC11AD196136140023269F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CFC23518197CF133000335D9 /* SwiftUtilities.swift in Sources */,
+				CFFC11B7196136140023269F /* AppDelegate.swift in Sources */,
+				CFF5D5401966057A0003A0B3 /* DatePickController.swift in Sources */,
+				CFF5D545196775A00003A0B3 /* ImageStore.swift in Sources */,
+				CF2259F1197E120300080197 /* ItemPicCell.swift in Sources */,
+				CFFC11D119613A5B0023269F /* Item.swift in Sources */,
+				CFF5D5471967CA660003A0B3 /* CameraOverlayView.swift in Sources */,
+				CFF5D53C19630A010003A0B3 /* DetailViewController.swift in Sources */,
+				CFFC11D319613AE60023269F /* ItemStore.swift in Sources */,
+				CF1818771980D29B00DEA400 /* ImageViewController.swift in Sources */,
+				CFFC11CF196136A40023269F /* ItemsViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CFFC11BA196136140023269F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CFFC11C5196136140023269F /* HomepwnerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CFFC11C0196136140023269F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CFFC11B0196136140023269F /* Homepwner */;
+			targetProxy = CFFC11BF196136140023269F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		CFFC11C6196136140023269F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				METAL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CFFC11C7196136140023269F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				METAL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CFFC11C9196136140023269F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = Homepwner/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.babygreene.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CFFC11CA196136140023269F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = Homepwner/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.babygreene.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CFFC11CC196136140023269F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Homepwner.app/Homepwner";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = HomepwnerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				METAL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.babygreene.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Debug;
+		};
+		CFFC11CD196136140023269F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Homepwner.app/Homepwner";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = HomepwnerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				METAL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.babygreene.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CFFC11AC196136140023269F /* Build configuration list for PBXProject "Homepwner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CFFC11C6196136140023269F /* Debug */,
+				CFFC11C7196136140023269F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CFFC11C8196136140023269F /* Build configuration list for PBXNativeTarget "Homepwner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CFFC11C9196136140023269F /* Debug */,
+				CFFC11CA196136140023269F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CFFC11CB196136140023269F /* Build configuration list for PBXNativeTarget "HomepwnerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CFFC11CC196136140023269F /* Debug */,
+				CFFC11CD196136140023269F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CFFC11A9196136140023269F /* Project object */;
+}

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailViewController" customModule="Homepwner" customModuleProvider="target">
+            <connections>
+                <outlet property="cameraButton" destination="c1e-Lu-f3X" id="ecj-Kl-xSm"/>
+                <outlet property="createDateLabel" destination="yvG-pb-CR3" id="Jx1-MR-9tD"/>
+                <outlet property="dateButton" destination="Tpx-wx-8FX" id="3z0-iF-lwt"/>
+                <outlet property="nameField" destination="pIx-lH-k4c" id="W2F-I1-TWJ"/>
+                <outlet property="nameLabel" destination="LUq-Xe-oXA" id="Dsx-YR-VNC"/>
+                <outlet property="serialField" destination="w1n-Nl-vwt" id="pbn-ao-0VX"/>
+                <outlet property="serialLabel" destination="5Hw-4P-M6r" id="4AR-Kt-tzN"/>
+                <outlet property="toolBar" destination="Fgt-x3-sq4" id="mHw-Oc-GvZ"/>
+                <outlet property="valueField" destination="cTB-4R-2b5" id="FUr-KL-Phl"/>
+                <outlet property="valueLabel" destination="hVj-wW-ylM" id="UbD-fq-6dD"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT" customClass="UIControl">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LUq-Xe-oXA">
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Serial" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Hw-4P-M6r">
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Value" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hVj-wW-ylM">
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pIx-lH-k4c">
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="vQE-oq-fr8"/>
+                    </connections>
+                </textField>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="w1n-Nl-vwt">
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="76x-CJ-XnI"/>
+                    </connections>
+                </textField>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cTB-4R-2b5">
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="KLH-yg-c0L"/>
+                    </connections>
+                </textField>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fgt-x3-sq4">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="EO5-hC-aQM"/>
+                    </constraints>
+                    <items>
+                        <barButtonItem style="plain" systemItem="camera" id="c1e-Lu-f3X">
+                            <color key="tintColor" red="0.034757062792778015" green="0.31522077322006226" blue="0.81491315364837646" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="takePicture:" destination="-1" id="JxH-i6-U0K"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem title="Del" id="9WL-of-dQ9">
+                            <connections>
+                                <action selector="buttonDeletePicture:" destination="-1" id="vNI-Zo-6Sx"/>
+                            </connections>
+                        </barButtonItem>
+                    </items>
+                </toolbar>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.94999999999999996" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yvG-pb-CR3">
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tpx-wx-8FX">
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <state key="normal" title="Change Date">
+                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="buttonChangeDate:" destination="-1" eventType="touchUpInside" id="eLD-wG-Aeb"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="cTB-4R-2b5" firstAttribute="trailing" secondItem="w1n-Nl-vwt" secondAttribute="trailing" id="0L3-Nn-GTZ"/>
+                <constraint firstItem="yvG-pb-CR3" firstAttribute="top" secondItem="cTB-4R-2b5" secondAttribute="bottom" constant="16" id="1ec-Ic-lif"/>
+                <constraint firstItem="hVj-wW-ylM" firstAttribute="top" secondItem="5Hw-4P-M6r" secondAttribute="bottom" constant="17" id="8AU-zX-dco"/>
+                <constraint firstItem="yvG-pb-CR3" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="9C6-V4-2LM"/>
+                <constraint firstAttribute="bottom" secondItem="Fgt-x3-sq4" secondAttribute="bottom" id="Jyi-q2-f8Z"/>
+                <constraint firstItem="5Hw-4P-M6r" firstAttribute="top" secondItem="LUq-Xe-oXA" secondAttribute="bottom" constant="17" id="KWn-S6-BDs"/>
+                <constraint firstItem="LUq-Xe-oXA" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="45" id="LzJ-qB-z08"/>
+                <constraint firstAttribute="trailing" secondItem="pIx-lH-k4c" secondAttribute="trailing" constant="20" id="NcS-CA-lER"/>
+                <constraint firstItem="cTB-4R-2b5" firstAttribute="leading" secondItem="w1n-Nl-vwt" secondAttribute="leading" id="Nnx-lh-hfu"/>
+                <constraint firstItem="cTB-4R-2b5" firstAttribute="baseline" secondItem="hVj-wW-ylM" secondAttribute="baseline" constant="-1" id="NzK-Rd-Mha"/>
+                <constraint firstItem="LUq-Xe-oXA" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="79" id="ONb-3m-Cqn"/>
+                <constraint firstItem="hVj-wW-ylM" firstAttribute="leading" secondItem="5Hw-4P-M6r" secondAttribute="leading" id="ToU-Hb-geC"/>
+                <constraint firstItem="LUq-Xe-oXA" firstAttribute="baseline" secondItem="pIx-lH-k4c" secondAttribute="baseline" id="bqH-2j-74d"/>
+                <constraint firstAttribute="centerX" secondItem="Tpx-wx-8FX" secondAttribute="centerX" id="egJ-OP-Cr0"/>
+                <constraint firstItem="Tpx-wx-8FX" firstAttribute="top" secondItem="yvG-pb-CR3" secondAttribute="bottom" constant="-4" id="hED-O4-Vgf"/>
+                <constraint firstItem="w1n-Nl-vwt" firstAttribute="trailing" secondItem="pIx-lH-k4c" secondAttribute="trailing" id="kYs-lt-sgr"/>
+                <constraint firstAttribute="trailing" secondItem="yvG-pb-CR3" secondAttribute="trailing" id="mtD-YX-gko"/>
+                <constraint firstItem="pIx-lH-k4c" firstAttribute="leading" secondItem="LUq-Xe-oXA" secondAttribute="trailing" constant="18" id="qB8-0g-Mdt"/>
+                <constraint firstItem="Fgt-x3-sq4" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="r7Q-2D-gUc"/>
+                <constraint firstItem="w1n-Nl-vwt" firstAttribute="baseline" secondItem="5Hw-4P-M6r" secondAttribute="baseline" constant="-1" id="sGQ-l1-Oh4"/>
+                <constraint firstAttribute="trailing" secondItem="Fgt-x3-sq4" secondAttribute="trailing" id="uMB-VL-8Gt"/>
+                <constraint firstItem="LUq-Xe-oXA" firstAttribute="leading" secondItem="5Hw-4P-M6r" secondAttribute="leading" id="vuQ-3x-cLc"/>
+                <constraint firstItem="LUq-Xe-oXA" firstAttribute="width" secondItem="hVj-wW-ylM" secondAttribute="width" id="wDG-YJ-Acr"/>
+                <constraint firstItem="LUq-Xe-oXA" firstAttribute="width" secondItem="5Hw-4P-M6r" secondAttribute="width" id="wvG-i2-vJn"/>
+                <constraint firstItem="w1n-Nl-vwt" firstAttribute="leading" secondItem="pIx-lH-k4c" secondAttribute="leading" id="zm2-ew-FmO"/>
+            </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+            <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+            <connections>
+                <action selector="backgroundTapped:" destination="-1" eventType="touchUpInside" id="9cY-9E-uhQ"/>
+            </connections>
+            <point key="canvasLocation" x="-91" y="271"/>
+        </view>
+    </objects>
+</document>

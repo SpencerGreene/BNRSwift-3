@@ -1,0 +1,432 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CFFC115B195FCB140023269F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFC115A195FCB140023269F /* AppDelegate.swift */; };
+		CFFC115D195FCB140023269F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFFC115C195FCB140023269F /* Images.xcassets */; };
+		CFFC1169195FCB140023269F /* HypnosisterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFC1168195FCB140023269F /* HypnosisterTests.swift */; };
+		CFFC1173195FCB6B0023269F /* HypnosisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFC1172195FCB6B0023269F /* HypnosisView.swift */; };
+		CFFC1175195FE0320023269F /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = CFFC1174195FE0320023269F /* logo.png */; };
+		CFFC1177195FF2460023269F /* HypnosisView-triangle.swift in Resources */ = {isa = PBXBuildFile; fileRef = CFFC1176195FF2460023269F /* HypnosisView-triangle.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CFFC1163195FCB140023269F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CFFC114D195FCB140023269F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CFFC1154195FCB140023269F;
+			remoteInfo = Hypnosister;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CFFC1155195FCB140023269F /* Hypnosister.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hypnosister.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CFFC1159195FCB140023269F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CFFC115A195FCB140023269F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CFFC115C195FCB140023269F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		CFFC1162195FCB140023269F /* HypnosisterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HypnosisterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CFFC1167195FCB140023269F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CFFC1168195FCB140023269F /* HypnosisterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HypnosisterTests.swift; sourceTree = "<group>"; };
+		CFFC1172195FCB6B0023269F /* HypnosisView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HypnosisView.swift; sourceTree = "<group>"; };
+		CFFC1174195FE0320023269F /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		CFFC1176195FF2460023269F /* HypnosisView-triangle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HypnosisView-triangle.swift"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CFFC1152195FCB140023269F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CFFC115F195FCB140023269F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CFFC114C195FCB140023269F = {
+			isa = PBXGroup;
+			children = (
+				CFFC1172195FCB6B0023269F /* HypnosisView.swift */,
+				CFFC1176195FF2460023269F /* HypnosisView-triangle.swift */,
+				CFFC1157195FCB140023269F /* Hypnosister */,
+				CFFC1165195FCB140023269F /* HypnosisterTests */,
+				CFFC1156195FCB140023269F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CFFC1156195FCB140023269F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CFFC1155195FCB140023269F /* Hypnosister.app */,
+				CFFC1162195FCB140023269F /* HypnosisterTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CFFC1157195FCB140023269F /* Hypnosister */ = {
+			isa = PBXGroup;
+			children = (
+				CFFC1174195FE0320023269F /* logo.png */,
+				CFFC115A195FCB140023269F /* AppDelegate.swift */,
+				CFFC115C195FCB140023269F /* Images.xcassets */,
+				CFFC1158195FCB140023269F /* Supporting Files */,
+			);
+			path = Hypnosister;
+			sourceTree = "<group>";
+		};
+		CFFC1158195FCB140023269F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CFFC1159195FCB140023269F /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CFFC1165195FCB140023269F /* HypnosisterTests */ = {
+			isa = PBXGroup;
+			children = (
+				CFFC1168195FCB140023269F /* HypnosisterTests.swift */,
+				CFFC1166195FCB140023269F /* Supporting Files */,
+			);
+			path = HypnosisterTests;
+			sourceTree = "<group>";
+		};
+		CFFC1166195FCB140023269F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CFFC1167195FCB140023269F /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CFFC1154195FCB140023269F /* Hypnosister */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CFFC116C195FCB140023269F /* Build configuration list for PBXNativeTarget "Hypnosister" */;
+			buildPhases = (
+				CFFC1151195FCB140023269F /* Sources */,
+				CFFC1152195FCB140023269F /* Frameworks */,
+				CFFC1153195FCB140023269F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Hypnosister;
+			productName = Hypnosister;
+			productReference = CFFC1155195FCB140023269F /* Hypnosister.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CFFC1161195FCB140023269F /* HypnosisterTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CFFC116F195FCB140023269F /* Build configuration list for PBXNativeTarget "HypnosisterTests" */;
+			buildPhases = (
+				CFFC115E195FCB140023269F /* Sources */,
+				CFFC115F195FCB140023269F /* Frameworks */,
+				CFFC1160195FCB140023269F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CFFC1164195FCB140023269F /* PBXTargetDependency */,
+			);
+			name = HypnosisterTests;
+			productName = HypnosisterTests;
+			productReference = CFFC1162195FCB140023269F /* HypnosisterTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CFFC114D195FCB140023269F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = babygreene.org;
+				TargetAttributes = {
+					CFFC1154195FCB140023269F = {
+						CreatedOnToolsVersion = 6.0;
+						DevelopmentTeam = D7LQT55MSW;
+						LastSwiftMigration = 0800;
+					};
+					CFFC1161195FCB140023269F = {
+						CreatedOnToolsVersion = 6.0;
+						DevelopmentTeam = D7LQT55MSW;
+						LastSwiftMigration = 0800;
+						TestTargetID = CFFC1154195FCB140023269F;
+					};
+				};
+			};
+			buildConfigurationList = CFFC1150195FCB140023269F /* Build configuration list for PBXProject "Hypnosister" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = CFFC114C195FCB140023269F;
+			productRefGroup = CFFC1156195FCB140023269F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CFFC1154195FCB140023269F /* Hypnosister */,
+				CFFC1161195FCB140023269F /* HypnosisterTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CFFC1153195FCB140023269F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CFFC1175195FE0320023269F /* logo.png in Resources */,
+				CFFC1177195FF2460023269F /* HypnosisView-triangle.swift in Resources */,
+				CFFC115D195FCB140023269F /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CFFC1160195FCB140023269F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CFFC1151195FCB140023269F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CFFC115B195FCB140023269F /* AppDelegate.swift in Sources */,
+				CFFC1173195FCB6B0023269F /* HypnosisView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CFFC115E195FCB140023269F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CFFC1169195FCB140023269F /* HypnosisterTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CFFC1164195FCB140023269F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CFFC1154195FCB140023269F /* Hypnosister */;
+			targetProxy = CFFC1163195FCB140023269F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		CFFC116A195FCB140023269F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				METAL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CFFC116B195FCB140023269F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				METAL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CFFC116D195FCB140023269F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = D7LQT55MSW;
+				INFOPLIST_FILE = Hypnosister/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.babygreene.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		CFFC116E195FCB140023269F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = D7LQT55MSW;
+				INFOPLIST_FILE = Hypnosister/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.babygreene.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		CFFC1170195FCB140023269F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Hypnosister.app/Hypnosister";
+				DEVELOPMENT_TEAM = D7LQT55MSW;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = HypnosisterTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				METAL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.babygreene.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Debug;
+		};
+		CFFC1171195FCB140023269F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Hypnosister.app/Hypnosister";
+				DEVELOPMENT_TEAM = D7LQT55MSW;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = HypnosisterTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				METAL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.babygreene.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CFFC1150195FCB140023269F /* Build configuration list for PBXProject "Hypnosister" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CFFC116A195FCB140023269F /* Debug */,
+				CFFC116B195FCB140023269F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CFFC116C195FCB140023269F /* Build configuration list for PBXNativeTarget "Hypnosister" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CFFC116D195FCB140023269F /* Debug */,
+				CFFC116E195FCB140023269F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CFFC116F195FCB140023269F /* Build configuration list for PBXNativeTarget "HypnosisterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CFFC1170195FCB140023269F /* Debug */,
+				CFFC1171195FCB140023269F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CFFC114D195FCB140023269F /* Project object */;
+}

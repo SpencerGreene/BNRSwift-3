@@ -25,18 +25,10 @@ class ReminderViewController: UIViewController {
     @IBAction func addReminder(_: AnyObject) {
         let date = self.datePicker!.date
         // NSLog("Setting reminder for %@", date)
-
-        /*
-        let note = UILocalNotification()
-        note.alertBody = "Hypnotize me"
-        note.fireDate = date
-        UIApplication.shared.scheduleLocalNotification(note)
-        */
-        
         
         let noteContent = UNMutableNotificationContent()
-        noteContent.title = "Hypnotize me"
-        noteContent.body  = "Set for a future reminder"
+        noteContent.title = "You asked for it"
+        noteContent.body  = "This is your Hypnonerd reminder!"
         noteContent.sound = UNNotificationSound.default()
         
         let trigger = makeNotificationTrigger(at: date)

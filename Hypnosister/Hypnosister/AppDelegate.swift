@@ -15,12 +15,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UIScrollViewDelegate {
     var hypnosisView: HypnosisView?
 
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
         self.window = UIWindow(frame: UIScreen.main.bounds)
         
         // Override point for customization after application launch.
         let screenRect = self.window!.bounds
-
         
         let scrollView = UIScrollView(frame:screenRect)
         scrollView.delegate = self
@@ -35,13 +34,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UIScrollViewDelegate {
         
         hypnosisView = HypnosisView(frame: bigRect)
         scrollView.addSubview(hypnosisView!)
-        
-        // screenRect.origin.x += screenRect.size.width
-        // let hyp2 = HypnosisView(frame:screenRect)
-        // scrollView.addSubview(hyp2)
 
         
         self.window!.addSubview(scrollView)
+        
+        self.window!.rootViewController = UIViewController()
+        self.window!.rootViewController!.view = scrollView
         
         // auto-generated stuff below here
         self.window!.backgroundColor = UIColor.white

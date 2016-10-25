@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF4F14151DBEA981005AF7CC /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF4F14141DBEA981005AF7CC /* Launch Screen.storyboard */; };
 		CFFC115B195FCB140023269F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFC115A195FCB140023269F /* AppDelegate.swift */; };
 		CFFC115D195FCB140023269F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFFC115C195FCB140023269F /* Images.xcassets */; };
 		CFFC1169195FCB140023269F /* HypnosisterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFC1168195FCB140023269F /* HypnosisterTests.swift */; };
@@ -26,6 +27,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CF4F14141DBEA981005AF7CC /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		CFFC1155195FCB140023269F /* Hypnosister.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hypnosister.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFFC1159195FCB140023269F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CFFC115A195FCB140023269F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 			children = (
 				CFFC1174195FE0320023269F /* logo.png */,
 				CFFC115A195FCB140023269F /* AppDelegate.swift */,
+				CF4F14141DBEA981005AF7CC /* Launch Screen.storyboard */,
 				CFFC115C195FCB140023269F /* Images.xcassets */,
 				CFFC1158195FCB140023269F /* Supporting Files */,
 			);
@@ -197,6 +200,7 @@
 			files = (
 				CFFC1175195FE0320023269F /* logo.png in Resources */,
 				CFFC1177195FF2460023269F /* HypnosisView-triangle.swift in Resources */,
+				CF4F14151DBEA981005AF7CC /* Launch Screen.storyboard in Resources */,
 				CFFC115D195FCB140023269F /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -331,7 +335,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = D7LQT55MSW;
 				INFOPLIST_FILE = Hypnosister/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.babygreene.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -346,7 +350,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = D7LQT55MSW;
 				INFOPLIST_FILE = Hypnosister/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.babygreene.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";

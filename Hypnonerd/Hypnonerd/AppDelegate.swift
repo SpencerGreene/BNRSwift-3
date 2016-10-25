@@ -19,9 +19,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window = UIWindow(frame: UIScreen.main.bounds)
         
         // Override point for customization after application launch.
-        // application.registerUserNotificationSettings(UIUserNotificationSettings(forTypes: UIUserNotificationType.Alert,categories: nil))
-        
-        
         
         let hvc = HypnosisViewController()
         let rvc = ReminderViewController()

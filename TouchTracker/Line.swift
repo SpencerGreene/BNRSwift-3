@@ -20,7 +20,7 @@ class Line: TTShape {
     get {
         let xdelt = end.x - begin.x
         let ydelt = end.y - begin.y
-        var theta = Float(atan(Double(abs(ydelt / xdelt))))
+        let theta = Float(atan(Double(abs(ydelt / xdelt))))
         var result: CGFloat = 0.0
         
         switch(xdelt >= 0.0, ydelt >= 0.0) {
@@ -32,20 +32,18 @@ class Line: TTShape {
             result = CGFloat(pi - theta)
         case (false, false):
             result = CGFloat(pi + theta)
-        default:
-            assert(false, "line get(angle): switch reached unreachable statement")
         }
         return(result)
     }
     }
     
-    override func pointAlongShape(t: Double) -> CGPoint  {
+    override func pointAlongShape(_ t: Double) -> CGPoint  {
         let xAlong = begin.x + CGFloat(t) * (end.x - begin.x)
         let yAlong = begin.y + CGFloat(t) * (end.y - begin.y)
         return CGPoint(x: xAlong, y: yAlong)
     }
     
-    override func translateBy(vector: CGPoint) {
+    override func translateBy(_ vector: CGPoint) {
         self.begin = self.begin + vector
         self.end = self.end + vector
     }

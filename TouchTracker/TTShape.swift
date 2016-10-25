@@ -16,17 +16,18 @@ class TTShape: NSObject {
     let closeThresholdPoints = 20.0
     
     // return a point somewhere on the shape - as t walks from 0 to 1 should trace entire shape
-    func pointAlongShape(t: Double) -> CGPoint {
+    func pointAlongShape(_ t: Double) -> CGPoint {
         assert(false, "pointAlongShape should be overridden")
-        return CGPointZero
+        return CGPoint.zero
     }
     
-    func translateBy(vector: CGPoint) {
+    func translateBy(_ vector: CGPoint) {
         assert(false, "translateBy should be overridden")
     }
     
-    func closeTo(p: CGPoint) -> Bool {
-        for (var t = 0.0; t <= 1.0; t += 0.05) {
+    func closeTo(_ p: CGPoint) -> Bool {
+        var t = 0.0
+        while (t <= 1.0) {
             let shapePoint = pointAlongShape(t)
             
             let xdelt = p.x - shapePoint.x
@@ -35,6 +36,7 @@ class TTShape: NSObject {
             if (hypot(Double(xdelt), Double(ydelt)) < closeThresholdPoints) {
                 return true
             }
+            t = t + 0.05
         }
         return false
     }

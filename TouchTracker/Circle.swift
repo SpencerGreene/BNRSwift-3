@@ -18,7 +18,7 @@ class Circle: TTShape {
     
     var currentTouches = 0
     
-    func updateCorner(c: CGPoint, key: NSValue) {
+    func updateCorner(_ c: CGPoint, key: NSValue) {
         if (key == key1) {
             corner1 = c
         } else if (key == key2) {
@@ -28,7 +28,7 @@ class Circle: TTShape {
         }
     }
     
-    override func pointAlongShape(t: Double) -> CGPoint  {
+    override func pointAlongShape(_ t: Double) -> CGPoint  {
         let theta = t * M_PI * 2.0
         
         let x1 = cos(theta) * Double(self.radius)
@@ -40,7 +40,7 @@ class Circle: TTShape {
         return CGPoint(x: x2 , y: y2)
     }
     
-    override func translateBy(vector: CGPoint) {
+    override func translateBy(_ vector: CGPoint) {
         corner1 = corner1 + vector
         corner2 = corner2 + vector
     }
@@ -96,7 +96,7 @@ class Circle: TTShape {
     }
     
     convenience override init() {
-        self.init(corner1: CGPointZero, corner2: CGPointZero)
+        self.init(corner1: CGPoint.zero, corner2: CGPoint.zero)
     }
 }
 

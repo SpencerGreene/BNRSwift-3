@@ -11,10 +11,10 @@ import UIKit
 class DrawView: UIView {
     
     enum SelectedFor {
-        case Move
-        case Delete
-        case Draw
-        case Nothing
+        case move
+        case delete
+        case draw
+        case nothing
     }
     
     var currentLines: Dictionary<NSValue, Line> = [:]
@@ -28,30 +28,30 @@ class DrawView: UIView {
     let lineWidthPermanent: CGFloat = 10.0
     
     weak var selectedShape:TTShape? = nil
-    var selectedFor = SelectedFor.Nothing
+    var selectedFor = SelectedFor.nothing
     
     var moveRecognizer: UIPanGestureRecognizer? = nil
     
     override init(frame: CGRect) {
         super.init(frame: frame)
 
-        self.backgroundColor = UIColor.grayColor()
-        self.multipleTouchEnabled = true
+        self.backgroundColor = UIColor.gray
+        self.isMultipleTouchEnabled = true
         
-        let doubleTapRecognizer = UITapGestureRecognizer(target: self, action: "doubleTap:")
+        let doubleTapRecognizer = UITapGestureRecognizer(target: self, action: #selector(DrawView.doubleTap(_:)))
         doubleTapRecognizer.numberOfTapsRequired = 2
         doubleTapRecognizer.delaysTouchesBegan = true
         self.addGestureRecognizer(doubleTapRecognizer)
         
-        let tapRecognizer = UITapGestureRecognizer(target: self, action: "tap:")
+        let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(DrawView.tap(_:)))
         tapRecognizer.delaysTouchesBegan = true
-        tapRecognizer.requireGestureRecognizerToFail(doubleTapRecognizer)
+        tapRecognizer.require(toFail: doubleTapRecognizer)
         self.addGestureRecognizer(tapRecognizer)
         
-        let longRecognizer = UILongPressGestureRecognizer(target: self, action: "longPress:")
+        let longRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(DrawView.longPress(_:)))
         self.addGestureRecognizer(longRecognizer)
         
-        self.moveRecognizer = UIPanGestureRecognizer(target: self, action: "moveLine:")
+        self.moveRecognizer = UIPanGestureRecognizer(target: self, action: #selector(DrawView.moveLine(_:)))
         self.moveRecognizer!.delegate = self
         self.moveRecognizer!.cancelsTouchesInView = false
         self.addGestureRecognizer(self.moveRecognizer!)
@@ -69,8 +69,8 @@ class DrawView: UIView {
 // Rendering the current state
 extension DrawView {
     // #pragma mark - Drawing
-    func setLineStyleForPath(path: UIBezierPath, temporary: Bool) {
-        path.lineCapStyle = kCGLineCapRound
+    func setLineStyleForPath(_ path: UIBezierPath, temporary: Bool) {
+        path.lineCapStyle = CGLineCap.round
         if (temporary) {
             path.lineWidth = self.lineWidthTemporary
             path.setLineDash([6.0, 12.0], count: 2, phase: 0)
@@ -79,70 +79,70 @@ extension DrawView {
         }
     }
     
-    func strokeLine(line: Line, temporary: Bool) {
+    func strokeLine(_ line: Line, temporary: Bool) {
         // NSLog("\(__FUNCTION__) temporary=\(temporary)")
         let bp = UIBezierPath()
         
         setLineStyleForPath(bp, temporary: temporary)
         
-        bp.moveToPoint(line.begin)
-        bp.addLineToPoint(line.end)
+        bp.move(to: line.begin)
+        bp.addLine(to: line.end)
         bp.stroke()
     }
     
-    func strokeCircle(circle: Circle, temporary: Bool) {
+    func strokeCircle(_ circle: Circle, temporary: Bool) {
         let bp = UIBezierPath()
         
         setLineStyleForPath(bp, temporary: temporary)
         if (temporary) { bp.lineWidth = circleWidthTemporary }
-        bp.moveToPoint(circle.begin)
-        bp.addArcWithCenter(circle.center, radius: circle.radius, startAngle: 0.0, endAngle: CGFloat(M_PI * 2.0), clockwise: true)
+        bp.move(to: circle.begin)
+        bp.addArc(withCenter: circle.center, radius: circle.radius, startAngle: 0.0, endAngle: CGFloat(M_PI * 2.0), clockwise: true)
         bp.stroke()
         
         if (temporary) {
             let rp = UIBezierPath()
-            rp.moveToPoint(circle.corner1)
-            rp.addLineToPoint(circle.corner12)
-            rp.addLineToPoint(circle.corner2)
-            rp.addLineToPoint(circle.corner21)
-            rp.addLineToPoint(circle.corner1)
+            rp.move(to: circle.corner1)
+            rp.addLine(to: circle.corner12)
+            rp.addLine(to: circle.corner2)
+            rp.addLine(to: circle.corner21)
+            rp.addLine(to: circle.corner1)
             rp.lineWidth = 2
             rp.stroke()
         }
     }
     
     
-    func strokeShape(shape: TTShape, temporary: Bool, selected: Bool) {
+    func strokeShape(_ shape: TTShape, temporary: Bool, selected: Bool) {
         if (temporary) {
-            UIColor.redColor().setStroke()
+            UIColor.red.setStroke()
         } else if (selected) {
-            if (selectedFor == SelectedFor.Delete) { UIColor.greenColor().setStroke() }
-            else if (selectedFor == SelectedFor.Move) { UIColor.yellowColor().setStroke() }
+            if (selectedFor == SelectedFor.delete) { UIColor.green.setStroke() }
+            else if (selectedFor == SelectedFor.move) { UIColor.yellow.setStroke() }
         } else {
-            UIColor.blackColor().setStroke()
+            UIColor.black.setStroke()
             // setAngleColor(line)
         }
         
         if (shape.isLine) {
-            let line = shape as Line
+            let line = shape as! Line
             strokeLine(line, temporary: temporary)
         }
         if (shape.isCircle) {
-            let circle = shape as Circle
+            let circle = shape as! Circle
             strokeCircle(circle, temporary: temporary)
         }
     }
     
     
     // ch12 Silver: set color of line based on angle of line
-    func setAngleColor(line: Line) {
+    func setAngleColor(_ line: Line) {
         
         let hue = CGFloat(Double(line.angle) / (2*M_PI))
         UIColor(hue: hue, saturation: 1.0, brightness: 1.0, alpha: 1.0).setStroke()
     }
 
     
-    override func drawRect(rect: CGRect) {
+    override func draw(_ rect: CGRect) {
         // println("\(__FUNCTION__)")
         
         // finished lines in color determined by angle (ch12 Silver)
@@ -151,11 +151,11 @@ extension DrawView {
         }
         
         // current lines in red, if any
-        for (key, line) in currentLines {
+        for (_, line) in currentLines {
             strokeShape(line, temporary: true, selected: false)
         }
         
-        for (key, circle) in currentCircles {
+        for (_, circle) in currentCircles {
             strokeShape(circle, temporary:true, selected: false)
         }
         
@@ -180,14 +180,14 @@ extension DrawView {
 extension DrawView {
     // #pragma mark - Touch handling
     
-    func processNewCircle(circleBeginTouches: [UITouch]) {
-        NSLog("\(__FUNCTION__)")
+    func processNewCircle(_ circleBeginTouches: [UITouch]) {
+        NSLog("\(#function)")
         
         let currentTouches = circleBeginTouches.count
         assert(currentTouches == 2, "beginning circle that doesn't have 2 touches?")
         
-        let corner1 = circleBeginTouches[0].locationInView(self)
-        let corner2 = circleBeginTouches[1].locationInView(self)
+        let corner1 = circleBeginTouches[0].location(in: self)
+        let corner2 = circleBeginTouches[1].location(in: self)
         let key1 = NSValue(nonretainedObject: circleBeginTouches[0])
         let key2 = NSValue(nonretainedObject: circleBeginTouches[1])
         
@@ -209,10 +209,10 @@ extension DrawView {
         currentLines[key2] = nil
     }
     
-    func processNewLines(lineBeginTouches: [UITouch]) {
-        NSLog("\(__FUNCTION__)")
+    func processNewLines(_ lineBeginTouches: [UITouch]) {
+        NSLog("\(#function)")
         for t in lineBeginTouches {
-            let location = t.locationInView(self)
+            let location = t.location(in: self)
             let line = Line()
             line.begin = location
             line.end = location
@@ -221,21 +221,21 @@ extension DrawView {
         }
     }
     
-    func numTouches(touches: NSSet!) -> Int {
-        return touches.allObjects.count
+    func numTouches(_ touches: Set<UITouch>!) -> Int {
+        return touches.count
     }
     
-    override func touchesBegan(touches: NSSet!, withEvent event: UIEvent!) {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent!) {
         
         // println("\(__FUNCTION__)  touches=\(numTouches)")
         
         // remove any selection that may be active
-        UIMenuController.sharedMenuController().setMenuVisible(false, animated: true)
+        UIMenuController.shared.setMenuVisible(false, animated: true)
         selectedShape = nil
-        selectedFor = SelectedFor.Draw
+        selectedFor = SelectedFor.draw
         
-        let tList = touches.allObjects as [UITouch]
-        if (numTouches(touches) == 2) {
+        let tList = Array(touches)
+        if (touches.count == 2) {
             processNewCircle(tList)
         } else {
             processNewLines(tList)
@@ -245,14 +245,14 @@ extension DrawView {
         self.setNeedsDisplay()
     }
     
-    override func touchesMoved(touches: NSSet!, withEvent event: UIEvent!) {
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent!) {
         
         // NSLog("\(__FUNCTION__)  touches=\(numTouches)");
         
-        let tList = touches.allObjects as [UITouch]
+        let tList = Array(touches)
         
         for t in tList {
-            let location = t.locationInView(self)
+            let location = t.location(in: self)
             let key = NSValue(nonretainedObject: t)
             if let line = currentLines[key] {
                 line.end = location
@@ -266,15 +266,15 @@ extension DrawView {
         self.setNeedsDisplay()
     }
     
-    override func touchesEnded(touches: NSSet!, withEvent event: UIEvent!) {
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent!) {
         
-        NSLog("\(__FUNCTION__)  touches=\(numTouches(touches))");
+        NSLog("\(#function)  touches=\(numTouches(touches))");
         
         
-        let tList = touches.allObjects as [UITouch]
+        let tList = Array(touches)
         
         for t in tList {
-            let location = t.locationInView(self)
+            let location = t.location(in: self)
             let key = NSValue(nonretainedObject: t)
 
             if let line = currentLines[key] {
@@ -303,10 +303,10 @@ extension DrawView {
         self.setNeedsDisplay()
     }
     
-    override func touchesCancelled(touches: NSSet!, withEvent event: UIEvent!)  {
-        NSLog("\(__FUNCTION__)");
+    override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent!)  {
+        NSLog("\(#function)");
         
-        let tList = touches.allObjects as [UITouch]
+        let tList = Array(touches)
         for t in tList {
             let key = NSValue(nonretainedObject: t)
             // currentLines.removeValueForKey(key)
@@ -318,8 +318,8 @@ extension DrawView {
     }
     
     func cancelCurrentShapes() {
-        self.currentLines.removeAll(keepCapacity: false)
-        self.currentCircles.removeAll(keepCapacity: false)
+        self.currentLines.removeAll(keepingCapacity: false)
+        self.currentCircles.removeAll(keepingCapacity: false)
         self.setNeedsDisplay()
     }
     
@@ -328,7 +328,7 @@ extension DrawView {
 
 // delegate methods for UIPanGestureRecognizer
 extension DrawView: UIGestureRecognizerDelegate {
-    func gestureRecognizer(gestureRecognizer: UIGestureRecognizer!, shouldRecognizeSimultaneouslyWithGestureRecognizer otherGestureRecognizer: UIGestureRecognizer!) -> Bool {
+    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
         if (gestureRecognizer == self.moveRecognizer) { return true }
         return false
     }
@@ -337,26 +337,26 @@ extension DrawView: UIGestureRecognizerDelegate {
 // Gestures and associated actions
 extension DrawView {
     
-    func tap(gr: UIGestureRecognizer) {
-        NSLog("\(__FUNCTION__)")
-        let tapPoint = gr.locationInView(self)
+    func tap(_ gr: UIGestureRecognizer) {
+        NSLog("\(#function)")
+        let tapPoint = gr.location(in: self)
         self.selectedShape = shapeAtPoint(tapPoint)
-        self.selectedFor = SelectedFor.Delete
+        self.selectedFor = SelectedFor.delete
         
-        let menu = UIMenuController.sharedMenuController()
+        let menu = UIMenuController.shared
         
-        if let selected = selectedShape {
+        if selectedShape != nil {
             // make ourselves the target of menu item action messages
             self.becomeFirstResponder()
             
             // grab the menu controller
             
             // create a new "Delete" UIMenuItem
-            let deleteItem = UIMenuItem(title: "Delete", action: "deleteShape:")
+            let deleteItem = UIMenuItem(title: "Delete", action: #selector(DrawView.deleteShape(_:)))
             menu.menuItems = [deleteItem]
             
             // tell the menu where it should come from, and show it
-            menu.setTargetRect(CGRect (origin: tapPoint, size: CGSize(width: 2, height: 2)), inView: self)
+            menu.setTargetRect(CGRect (origin: tapPoint, size: CGSize(width: 2, height: 2)), in: self)
             menu.setMenuVisible(true, animated: true)
             
         } else {
@@ -367,18 +367,18 @@ extension DrawView {
         self.setNeedsDisplay()
     }
     
-    override func canBecomeFirstResponder() -> Bool {
+    override var canBecomeFirstResponder : Bool {
         return true
     }
     
-    func deleteShape(obj: AnyObject?) {
-        NSLog("\(__FUNCTION__)")
-        assert(self.selectedFor == SelectedFor.Delete, "calling deleteShape but not SelectedFor.Delete")
+    func deleteShape(_ obj: AnyObject?) {
+        NSLog("\(#function)")
+        assert(self.selectedFor == SelectedFor.delete, "calling deleteShape but not SelectedFor.Delete")
         if let sel = selectedShape {
-            for (index, shape) in enumerate(self.finishedShapes) {
+            for (index, shape) in self.finishedShapes.enumerated() {
                 if sel === shape {
                     NSLog("Deleting shape at index \(index)")
-                    self.finishedShapes.removeAtIndex(index)
+                    self.finishedShapes.remove(at: index)
                     self.selectedShape = nil
                     self.setNeedsDisplay()
                     return
@@ -390,48 +390,48 @@ extension DrawView {
         }
     }
     
-    func shapeAtPoint(p: CGPoint) -> TTShape? {
+    func shapeAtPoint(_ p: CGPoint) -> TTShape? {
         for shape in self.finishedShapes {
             if shape.closeTo(p) {
-                NSLog("\(__FUNCTION__) found a shape")
+                NSLog("\(#function) found a shape")
                 return shape
             }
         }
-        NSLog("\(__FUNCTION__) did not find a shape")
+        NSLog("\(#function) did not find a shape")
         return(nil)
     }
     
-    func doubleTap(gr: UIGestureRecognizer) {
-        NSLog("\(__FUNCTION__)")
+    func doubleTap(_ gr: UIGestureRecognizer) {
+        NSLog("\(#function)")
         cancelCurrentShapes()
         // self.finishedShapes.removeAll(keepCapacity: false)
         self.finishedShapes = Array<TTShape>()
         self.setNeedsDisplay()
     }
     
-    func longPress(gr: UIGestureRecognizer) {
-        NSLog("\(__FUNCTION__)")
+    func longPress(_ gr: UIGestureRecognizer) {
+        NSLog("\(#function)")
    
-        if (gr.state == UIGestureRecognizerState.Began) {
-            selectedShape = shapeAtPoint(gr.locationInView(self))
-            selectedFor = SelectedFor.Move
-            UIMenuController.sharedMenuController().setMenuVisible(false, animated: true)
-            if let moveShape = selectedShape {
+        if (gr.state == UIGestureRecognizerState.began) {
+            selectedShape = shapeAtPoint(gr.location(in: self))
+            selectedFor = SelectedFor.move
+            UIMenuController.shared.setMenuVisible(false, animated: true)
+            if selectedShape != nil {
                 cancelCurrentShapes()
             }
-        } else if (gr.state == UIGestureRecognizerState.Ended) {
+        } else if (gr.state == UIGestureRecognizerState.ended) {
             selectedShape = nil
-            selectedFor = SelectedFor.Nothing
+            selectedFor = SelectedFor.nothing
             self.setNeedsDisplay()
         }
     }
     
 
-    func moveLine(gr: UIPanGestureRecognizer) {
-        let translateVector = gr.translationInView(self)
-        gr.setTranslation(CGPointZero, inView: self)
+    func moveLine(_ gr: UIPanGestureRecognizer) {
+        let translateVector = gr.translation(in: self)
+        gr.setTranslation(CGPoint.zero, in: self)
 
-        if (selectedFor == SelectedFor.Draw) {
+        if (selectedFor == SelectedFor.draw) {
             let distance = hypot(Double(translateVector.x), Double(translateVector.y))
             if (distance > 1.0) {
                 lineWidthTemporary = CGFloat(distance)
@@ -441,9 +441,9 @@ extension DrawView {
             return
         }
         
-        if (selectedShape == nil) || (selectedFor != SelectedFor.Move)  { return }
+        if (selectedShape == nil) || (selectedFor != SelectedFor.move)  { return }
         
-        NSLog("\(__FUNCTION__)")
+        NSLog("\(#function)")
         selectedShape!.translateBy(translateVector)
         self.setNeedsDisplay()
     }
